@@ -1,0 +1,42 @@
+html, .container{
+  height: 100%;
+  display: flex;
+  font-family: 'Black Han Sans', sans-serif;
+  flex-direction: column;
+
+}
+
+.tile {
+  width: 100px;
+  height: 100px;
+  min-width: 100px;
+  min-height: 100px;
+  border: 1px black solid;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  box-sizing: border-box;
+  text-align: center;
+
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  align-content: center;
+  justify-content: center;
+  align-self: center;
+
+}
+
+.title {
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  margin: 30px 0;
+  font-size: xx-large;
+}
