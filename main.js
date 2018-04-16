@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   let current = 'x';
+  let winner = document.getElementById('winner');
+  let counter = 0;
+
   console.log('haha');
   let tiles = document.getElementsByClassName('tile');
   // console.log(tiles);
@@ -9,16 +12,26 @@ document.addEventListener("DOMContentLoaded", () => {
       if(item.innerHTML === ''){
         item.innerHTML = current;
         current = current === 'x' ? 'o' : 'x';
+        counter +=1;
       }
       if(checker(tiles)){
-        alert(`Player ${checker(tiles)} has won!`);
-        reset(tiles);
-      }
+        const result = checker(tiles);
+        winner.innerHTML = `Player ${result} has won!`;
+      }else if(counter === 9){
+          winner.innerHTML ='too bad, game is a draw!';
+        }
     });
   });
+
+  let reset = document.getElementById('reset');
+    reset.addEventListener('click', () => {
+    playAgain(tiles);
+    winner.innerHTML ='';
+  });
+
 });
 
-function reset(tiles){
+function playAgain(tiles){
   Array.from(tiles).forEach(item => {
     item.innerHTML = '';
   });

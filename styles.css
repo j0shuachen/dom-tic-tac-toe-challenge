@@ -38,6 +38,35 @@ html, .container, body{
   align-items: center;
   display: flex;
   text-align: center;
-  margin: 30px 0;
+  margin: 30px 0 50px 0;
   font-size: xx-large;
+}
+
+#winner {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  min-height: 35px;
+  margin: 5px 0;
+}
+
+
+#reset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 5px 7px;
+  border: 1px black solid;
+  width: 200px;
+  align-self: center;
+  margin: 10px 0;
+}
+
+#reset:hover {
+  cursor: pointer;
 }
