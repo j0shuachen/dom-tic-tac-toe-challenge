@@ -12,10 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       if(checker(tiles)){
         alert(`Player ${checker(tiles)} has won!`);
+        reset(tiles);
       }
     });
   });
 });
+
+function reset(tiles){
+  Array.from(tiles).forEach(item => {
+    item.innerHTML = '';
+  });
+}
 
 const wins = [
   [0, 1, 2],
