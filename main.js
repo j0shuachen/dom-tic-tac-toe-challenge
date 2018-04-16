@@ -4,11 +4,15 @@ document.addEventListener("DOMContentLoaded", () => {
   let tiles = document.getElementsByClassName('tile');
   console.log(tiles);
   Array.from(tiles).forEach(item => {
-    item.addEventListener('click', () => {
-      console.log(current);
-      item.innerHTML = current;
-      current = current === 'x' ? 'o' : 'x';
-    });
+      item.addEventListener('click', () => {
+        console.log(current);
+        if(item.innerHTML === ''){
+          item.innerHTML = current;
+          current = current === 'x' ? 'o' : 'x';
+        }
+      });
+
+
   });
 
 });
