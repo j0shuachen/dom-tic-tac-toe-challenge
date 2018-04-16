@@ -1,8 +1,9 @@
-html, .container{
+html, .container, body{
   height: 100%;
   display: flex;
   font-family: 'Black Han Sans', sans-serif;
   flex-direction: column;
+
 
 }
 
